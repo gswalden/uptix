@@ -1,0 +1,8 @@
+{
+  "validthis": true,
+  "laxbreak": true,
+  "globalstrict": true,
+  "strict": false,
+  "esnext": true,
+  "expr": true
+}

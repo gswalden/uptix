@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  include head.jade
+  body
+    .wrap
+
+      #current
+        .symbol AAPL
+        .exchange NYSE
+        .price 34.56
+        .percent 0%
+
+      #time
+        #progress
+
+      #more
+
+      #notes
+        h5 Developer Notes
+        ul
+          li Data is currently simulated! Back-end is being built
+          li Adding/removing/rearranging in development
+          li Only mobile-size is present, larger views to come later
+          li Source available on #[a(href='//github.com/gswalden/uptix') GitHub]
+
+    include scripts.jade

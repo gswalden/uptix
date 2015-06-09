@@ -1,0 +1,139 @@
+@import (less) 'normalize.css';
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.wrap {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.symbol {
+  display: inline-block;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+.exchange {
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.price {
+  font-size: 4rem;
+  line-height: 2;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 70%;
+      left: 0;
+      content: "";
+    }
+    &.up, &.down {
+      &::after {
+        background: #2ecc71;
+        opacity: 1;
+      }
+    }
+    &.down {
+      &::after {
+        background: #C0392B;
+      }
+    }
+  }
+}
+.percent {
+  text-align: right;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+#current {
+  padding: 3rem 2rem;
+  background: black;
+  background: #2C3E50;
+  color: white;
+  color: #ECF0F1;
+
+  .symbol {
+    font-size: 2rem;
+  }
+  .price {
+    font-size: 8rem;
+    line-height: 2;
+
+    span {
+      &::after {
+        top: 80%;
+      }
+    }
+  }
+  .percent {
+    font-size: 2rem;
+  }
+}
+#more {
+  background: white;
+  background: #2C3E50;
+  color: black;
+  color: #2C3E50;
+}
+.ticker {
+  display: inline-block;
+  width: 50%;
+  height: 0;
+  margin-bottom: 2px;
+  padding: 0 1rem 50%;
+  box-sizing: border-box;
+  background: #ECF0F1;
+
+  &:hover {
+    background: white;
+  }
+  &:nth-child(even) {
+    border-left: 1px solid #2C3E50;
+  }
+  // &:nth-child(odd) {
+  //   border-right: 1px solid #2C3E50;
+  // }
+  @padding: 10%;
+  .symbol {
+    padding-top: @padding;
+  }
+  .price {
+    line-height: 3;
+  }
+  .percent {
+    padding-bottom: @padding;
+  }
+}
+#time {
+  background: #2C3E50;
+  height: 1rem;
+}
+#progress {
+  background: #3498db;
+  width: 0;
+  height: 100%;
+  transition: .2s;
+}
+
+#notes {
+  padding: 0 2rem;
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
