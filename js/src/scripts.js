@@ -129,8 +129,9 @@
   var $progress = u.$1('#progress');
   setInterval(function() {
     var width = parseInt($progress.style.width.replace('%', ''), 10) || 0;
-    width += 5;
+    width += 1;
     if (width > 100) width = 0;
     $progress.style.width = width + '%';
-  }, 10000);
+    u.$1('#time-text span').textContent = width;
+  }, 1200);
 })(window, document, window.u);
