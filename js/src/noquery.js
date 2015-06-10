@@ -35,6 +35,12 @@ window.u = {
   toggleClass: function(el, className) {
     if (this.hasClass(el, className)) this.removeClass(el, className);
     else this.addClass(el, className);
+  },
+  prepend: function(el, parent) {
+    parent.insertBefore(el, parent.firstChild);
+  },
+  click: function(el, func) {
+    el.addEventListener('click', func);
   }
 };
 

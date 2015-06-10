@@ -59,6 +59,14 @@ body {
   font-size: 1.5rem;
   line-height: 1;
 }
+.promote {
+  display: inline-block;
+  opacity: 0;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-left: 1rem;
+  cursor: pointer;
+}
 #current {
   padding: 3rem 2rem;
   background: black;
@@ -100,6 +108,9 @@ body {
 
   &:hover {
     background: white;
+    .promote {
+      opacity: 1;
+    }
   }
   &:nth-child(even) {
     border-left: 1px solid #2C3E50;
